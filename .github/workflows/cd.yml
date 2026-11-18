@@ -1,0 +1,22 @@
+
+name: Python CD (Deploy)
+on: 
+  push: 
+    branches: ["main"]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+steps:
+    - name: Checkout del código
+      uses: actions/checkout@v4
+
+    - name: Configurar Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Simulación de Despliegue a Producción
+      run: |
+        echo "¡Las pruebas pasaron previamente en su propio workflow!"
+        echo "Iniciando despliegue automático de la aplicación..."
