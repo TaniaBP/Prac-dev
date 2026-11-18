@@ -1,4 +1,4 @@
-from src.operaciones import Operaciones
+from operaciones import Operaciones
 
 def test_sumar():
     op = Operaciones()
